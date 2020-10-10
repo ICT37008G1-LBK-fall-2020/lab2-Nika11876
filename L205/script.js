@@ -1,4 +1,12 @@
-for (var i = 2; i < 20; i++) {
-  if ((i % 2 == 0 && i != 2) || i % 3 == 0) continue;
-  alert(i);
+for (var i = 2; i < 100; i++) {
+  var ndiv = 0;
+  for (var j = i - 1; j > 1; j--) {
+    if (i % j == 0) {
+      ndiv++;
+      break;
+    }
+  }
+  if (ndiv == 0) {
+    alert(i);
+  }
 }
